@@ -249,11 +249,6 @@ fun FameCard(item: FameItem, onClick: (FameItem) -> Unit) {
 
 @Composable
 fun DiningScreen() {
-    Column(modifier = Modifier.fillMaxSize()) {
-        // Logo and Header
-        HeaderSection("Dining Halls & Meal Plans")
-    }
-
     val diningHalls = listOf(
         FameItem("Upper Commons", "The Upper Commons is the University’s main dining hall serving breakfast, lunch, and dinner. Choices seem endless at this all-you-care-to-eat café — from made-to-order stir-fry, fresh salads, comforting entrée’s, to tempting pizza, pasta, and grill favorites. The Upper Commons also has a dedicated made-without-gluten station and made-without-gluten options at all stations."),
         FameItem("Lower Commons", "The Lower Commons is located right below the Upper Commons and has everything from GO meals to sushi, pizza, grill, a salad bar, and made-to-order sandwiches – fire grilled or cold!"),
@@ -296,7 +291,7 @@ fun DiningScreen() {
     }
 
     Column(modifier = Modifier.fillMaxSize()) {
-        HeaderSection("Dining Halls & Meal Plans")
+        HeaderSection("Dining Services")
 
         LazyColumn(
             modifier = Modifier
