@@ -42,7 +42,7 @@ private val validGrades = setOf(
     "F"
 )
 
-data class FameItem(val title: String, val detail: String, val imageRes: Int? = null)
+data class BoxItem(val title: String, val detail: String, val imageRes: Int? = null)
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,35 +107,35 @@ fun TabScreen(viewModel: MainViewModel) {
 @Composable
 fun FameScreen() {
     val nationalRankings = listOf(
-        FameItem("Best Regional University", "Roger Williams University is placed 35th as the best regional university in the North. This ranking highlights our commitment to providing a top-tier education and a supportive learning environment for all students."),
-        FameItem("Best Schools for Veterans", "Ranked 47th for best schools for veterans. We take great pride in supporting our service members with dedicated resources, flexible programs, and a welcoming community that honors their service."),
-        FameItem("Architecture Excellence", "The Architecture program is ranked 78th in the nation. Our Cummings School of Architecture is renowned for its innovative curriculum and for preparing students to lead in a rapidly changing world."),
-        FameItem("Best Campus Food", "Our food is ranked 21st in the nation! From locally sourced ingredients to diverse culinary options, our dining services consistently deliver a high-quality experience for the entire campus community.")
+        BoxItem("Best Regional University", "Roger Williams University is placed 35th as the best regional university in the North. This ranking highlights our commitment to providing a top-tier education and a supportive learning environment for all students."),
+        BoxItem("Best Schools for Veterans", "Ranked 47th for best schools for veterans. We take great pride in supporting our service members with dedicated resources, flexible programs, and a welcoming community that honors their service."),
+        BoxItem("Architecture Excellence", "The Architecture program is ranked 78th in the nation. Our Cummings School of Architecture is renowned for its innovative curriculum and for preparing students to lead in a rapidly changing world."),
+        BoxItem("Best Campus Food", "Our food is ranked 21st in the nation! From locally sourced ingredients to diverse culinary options, our dining services consistently deliver a high-quality experience for the entire campus community.")
     )
 
     val athleticAchievements = listOf(
-        FameItem("CCC Team Champions", "Mens track & field 2024 CCC team Champions scoring 252 points. This victory showcases the incredible talent and dedication of our student-athletes and coaching staff in achieving excellence on the field."),
-        FameItem("First 2,000-Point Scorer", "Mens basketball player Ian Coene became the first 2,000-point scorer in program history. This historic milestone reflects years of hard work, skill, and a passion for the game that inspires us all."),
-        FameItem("Records Broken", "Womans basketball player Katy Bovee set records with 1,570 career points and 178 three-pointers. Her outstanding performance on the court has cemented her legacy as one of the program's all-time greats."),
-        FameItem("National Sailing Champions", "Sailing team won the 2024 ICSA Open Team Race National Championship. This achievement solidifies Roger Williams University's position as a powerhouse in collegiate sailing on a national stage.")
+        BoxItem("CCC Team Champions", "Mens track & field 2024 CCC team Champions scoring 252 points. This victory showcases the incredible talent and dedication of our student-athletes and coaching staff in achieving excellence on the field."),
+        BoxItem("First 2,000-Point Scorer", "Mens basketball player Ian Coene became the first 2,000-point scorer in program history. This historic milestone reflects years of hard work, skill, and a passion for the game that inspires us all."),
+        BoxItem("Records Broken", "Womans basketball player Katy Bovee set records with 1,570 career points and 178 three-pointers. Her outstanding performance on the court has cemented her legacy as one of the program's all-time greats."),
+        BoxItem("National Sailing Champions", "Sailing team won the 2024 ICSA Open Team Race National Championship. This achievement solidifies Roger Williams University's position as a powerhouse in collegiate sailing on a national stage.")
     )
 
     val alumni = listOf(
-        FameItem("Tim Baxter", "Tim Baxter served as the CEO of Samsung Electronics North America. His leadership in the global tech industry is a testament to the strong foundation and leadership skills developed during his time at RWU.", R.drawable.tim_baxter),
-        FameItem("Chris Sparling", "Chris Sparling is a successful screenwriter and director, known for his work on films like 'Buried'. His creative contributions to the film industry bring great pride to his alma mater.", R.drawable.chris_sparling),
-        FameItem("Jerry Remy", "Jerry Remy was a former MLB player and a beloved broadcaster for the Boston Red Sox. Known as 'RemDawg', his legacy in the world of sports and media continues to inspire fans and students alike.", R.drawable.jerry_remy),
-        FameItem("James W. Nuttall", "James W. Nuttall is a retired United States Army Major General. His distinguished career in military service exemplifies the values of leadership, duty, and honor that we strive to instill in all RWU students.", R.drawable.james_nuttall),
-        FameItem("Joe Polisena", "Joe Polisena is a former Rhode Island State Senator and served as the mayor of Johnston, RI. His dedication to public service and community development has had a lasting impact on the region.", R.drawable.joe_polesina),
-        FameItem("Peter Kilmartin", "Peter Kilmartin served as the 73rd Attorney General of Rhode Island. His commitment to justice and public safety throughout his career reflects the high standards of our alumni in the legal profession.", R.drawable.peter_kilmartin1)
+        BoxItem("Tim Baxter", "Tim Baxter served as the CEO of Samsung Electronics North America. His leadership in the global tech industry is a testament to the strong foundation and leadership skills developed during his time at RWU.", R.drawable.tim_baxter),
+        BoxItem("Chris Sparling", "Chris Sparling is a successful screenwriter and director, known for his work on films like 'Buried'. His creative contributions to the film industry bring great pride to his alma mater.", R.drawable.chris_sparling),
+        BoxItem("Jerry Remy", "Jerry Remy was a former MLB player and a beloved broadcaster for the Boston Red Sox. Known as 'RemDawg', his legacy in the world of sports and media continues to inspire fans and students alike.", R.drawable.jerry_remy),
+        BoxItem("James W. Nuttall", "James W. Nuttall is a retired United States Army Major General. His distinguished career in military service exemplifies the values of leadership, duty, and honor that we strive to instill in all RWU students.", R.drawable.james_nuttall),
+        BoxItem("Joe Polisena", "Joe Polisena is a former Rhode Island State Senator and served as the mayor of Johnston, RI. His dedication to public service and community development has had a lasting impact on the region.", R.drawable.joe_polesina),
+        BoxItem("Peter Kilmartin", "Peter Kilmartin served as the 73rd Attorney General of Rhode Island. His commitment to justice and public safety throughout his career reflects the high standards of our alumni in the legal profession.", R.drawable.peter_kilmartin1)
     )
 
     val braggingRights = listOf(
-        FameItem("Beautiful Bristol Campus", "Stunning waterfront views on our historic 140-acre campus. Our location in Bristol, Rhode Island, provides an inspiring backdrop for learning, living, and creating lifelong memories."),
-        FameItem("Global Sustainability", "Top 5% of universities globally for sustainability initiatives. We are committed to environmental stewardship and integrating sustainable practices into every aspect of campus life."),
-        FameItem("Student Engagement", "Ranked 1st in Rhode Island for student engagement and success. Our faculty and staff are dedicated to ensuring every student has the support they need to thrive academically and personally.")
+        BoxItem("Beautiful Bristol Campus", "Stunning waterfront views on our historic 140-acre campus. Our location in Bristol, Rhode Island, provides an inspiring backdrop for learning, living, and creating lifelong memories."),
+        BoxItem("Global Sustainability", "Top 5% of universities globally for sustainability initiatives. We are committed to environmental stewardship and integrating sustainable practices into every aspect of campus life."),
+        BoxItem("Student Engagement", "Ranked 1st in Rhode Island for student engagement and success. Our faculty and staff are dedicated to ensuring every student has the support they need to thrive academically and personally.")
     )
 
-    var selectedItem by remember { mutableStateOf<FameItem?>(null) }
+    var selectedItem by remember { mutableStateOf<BoxItem?>(null) }
 
     if (selectedItem != null) {
         AlertDialog(
@@ -214,7 +214,7 @@ fun FameHeader(title: String) {
 }
 
 @Composable
-fun FameCard(item: FameItem, onClick: (FameItem) -> Unit) {
+fun FameCard(item: BoxItem, onClick: (BoxItem) -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -249,24 +249,25 @@ fun FameCard(item: FameItem, onClick: (FameItem) -> Unit) {
 
 @Composable
 fun DiningScreen() {
+
     val diningHalls = listOf(
-        FameItem("Upper Commons", "The Upper Commons is the University’s main dining hall serving breakfast, lunch, and dinner. Choices seem endless at this all-you-care-to-eat café — from made-to-order stir-fry, fresh salads, comforting entrée’s, to tempting pizza, pasta, and grill favorites. The Upper Commons also has a dedicated made-without-gluten station and made-without-gluten options at all stations."),
-        FameItem("Lower Commons", "The Lower Commons is located right below the Upper Commons and has everything from GO meals to sushi, pizza, grill, a salad bar, and made-to-order sandwiches – fire grilled or cold!"),
-        FameItem("Roger's Café", "The Roger's Café is a taqueria-inspired café serving breakfast and lunch along with GO meals, soup, and sushi."),
-        FameItem("Hawk's Nest", "The Hawk’s Nest is located in the Recreation Center and serves coffee, fresh pastries, and bagels in addition to fruit smoothies and GO meals."),
-        FameItem("Global Café", "Global Café serves Starbucks coffee and specializes in espresso drinks, but also GO meals, grilled sandwiches, and breakfast sandwiches."),
-        FameItem("Just Baked", "Just Baked kiosk is located in Center for Student Development offers 24hr convenient hot meal and snacks.")
+        BoxItem("Upper Commons", "The Upper Commons is the University’s main dining hall serving breakfast, lunch, and dinner. Choices seem endless at this all-you-care-to-eat café — from made-to-order stir-fry, fresh salads, comforting entrée’s, to tempting pizza, pasta, and grill favorites. The Upper Commons also has a dedicated made-without-gluten station and made-without-gluten options at all stations."),
+        BoxItem("Lower Commons", "The Lower Commons is located right below the Upper Commons and has everything from GO meals to sushi, pizza, grill, a salad bar, and made-to-order sandwiches – fire grilled or cold!"),
+        BoxItem("Roger's Café", "The Roger's Café is a taqueria-inspired café serving breakfast and lunch along with GO meals, soup, and sushi."),
+        BoxItem("Hawk's Nest", "The Hawk’s Nest is located in the Recreation Center and serves coffee, fresh pastries, and bagels in addition to fruit smoothies and GO meals."),
+        BoxItem("Global Café", "Global Café serves Starbucks coffee and specializes in espresso drinks, but also GO meals, grilled sandwiches, and breakfast sandwiches."),
+        BoxItem("Just Baked", "Just Baked kiosk is located in Center for Student Development offers 24hr convenient hot meal and snacks.")
     )
 
     val mealPlans = listOf(
-        FameItem("125 Block Plan", "Ideal plan for apartment dwellers who want to eat an average of 7-8 meals per week on campus and use 400 in Hawk Dollars throughout the semester; 3 Bonus Meals per semester to be used for yourself, another on-campus student, or commuter."),
-        FameItem("Block Meal Plans", "Block Meal Plans offer students the most flexibility as the amount of meals can be used throughout the semester in any manner. Students can use their block meals at our two all-you-care-to-eat dining halls.  All Block Meal Plans come with Bonus Meals, these meals can be used for guests not on a Roger Williams dining plan."),
-        FameItem("Commuter Plan", "This plan offers the best value for commuting students. You will receive 20 meals per semester that can be eaten at any meal period, as well as 300 Hawk Dollars."),
-        FameItem("Hawk Dollars", "Hawk Dollars are accepted like cash in all our dining locations.  Hawk Dollars are a “declining balance account” that works on the same principle as a debit card.  You can use your Hawk Dollars to purchase beverages, snacks, or even a full meal in all of the RWU retail and residential locations."),
-        FameItem("Points", "Much like Hawk Dollars, Points are accepted like cash in all our dining locations and are a “declining balance account” that works on the same principle as a debit card ")
+        BoxItem("125 Block Plan", "Ideal plan for apartment dwellers who want to eat an average of 7-8 meals per week on campus and use 400 in Hawk Dollars throughout the semester; 3 Bonus Meals per semester to be used for yourself, another on-campus student, or commuter."),
+        BoxItem("Block Meal Plans", "Block Meal Plans offer students the most flexibility as the amount of meals can be used throughout the semester in any manner. Students can use their block meals at our two all-you-care-to-eat dining halls.  All Block Meal Plans come with Bonus Meals, these meals can be used for guests not on a Roger Williams dining plan."),
+        BoxItem("Commuter Plan", "This plan offers the best value for commuting students. You will receive 20 meals per semester that can be eaten at any meal period, as well as 300 Hawk Dollars."),
+        BoxItem("Hawk Dollars", "Hawk Dollars are accepted like cash in all our dining locations.  Hawk Dollars are a “declining balance account” that works on the same principle as a debit card.  You can use your Hawk Dollars to purchase beverages, snacks, or even a full meal in all of the RWU retail and residential locations."),
+        BoxItem("Points", "Much like Hawk Dollars, Points are accepted like cash in all our dining locations and are a “declining balance account” that works on the same principle as a debit card ")
     )
 
-    var selectedItem by remember { mutableStateOf<FameItem?>(null) }
+    var selectedItem by remember { mutableStateOf<BoxItem?>(null) }
 
     if (selectedItem != null) {
         AlertDialog(
