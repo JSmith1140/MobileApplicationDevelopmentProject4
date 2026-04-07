@@ -290,34 +290,8 @@ fun TrivialScreen(viewModel: MainViewModel) {
             .padding(bottom = 8.dp),
         horizontalAlignment = CenterHorizontally
     ) {
-        // Logo Section
-        Image(
-            painter = painterResource(id = R.drawable.rwulogo),
-            contentDescription = "Trivia Logo",
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(180.dp)
-                .padding(top = 16.dp),
-            contentScale = ContentScale.Fit
-        )
+        HeaderSection("University Trivia")
 
-        // Title Bar
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(MaterialTheme.colorScheme.secondary)
-                .padding(vertical = 12.dp)
-        ) {
-            Text(
-                text = "University Trivia",
-                modifier = Modifier.fillMaxWidth(),
-                textAlign = TextAlign.Center,
-                color = MaterialTheme.colorScheme.onSecondary,
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold
-            )
-        }
-        HorizontalDivider(color = MaterialTheme.colorScheme.tertiary, thickness = 4.dp)
 
         Spacer(modifier = Modifier.height(16.dp))
 
