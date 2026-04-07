@@ -248,10 +248,92 @@ fun FameCard(item: FameItem, onClick: (FameItem) -> Unit) {
 }
 
 @Composable
-fun DiningScreen(){
+fun DiningScreen() {
     Column(modifier = Modifier.fillMaxSize()) {
         // Logo and Header
         HeaderSection("Dining Halls & Meal Plans")
+    }
+
+    val diningHalls = listOf(
+        FameItem("Upper Commons", "The Upper Commons is the University’s main dining hall serving breakfast, lunch, and dinner. Choices seem endless at this all-you-care-to-eat café — from made-to-order stir-fry, fresh salads, comforting entrée’s, to tempting pizza, pasta, and grill favorites. The Upper Commons also has a dedicated made-without-gluten station and made-without-gluten options at all stations."),
+        FameItem("Lower Commons", "The Lower Commons is located right below the Upper Commons and has everything from GO meals to sushi, pizza, grill, a salad bar, and made-to-order sandwiches – fire grilled or cold!"),
+        FameItem("Roger's Café", "The Roger's Café is a taqueria-inspired café serving breakfast and lunch along with GO meals, soup, and sushi."),
+        FameItem("Hawk's Nest", "The Hawk’s Nest is located in the Recreation Center and serves coffee, fresh pastries, and bagels in addition to fruit smoothies and GO meals."),
+        FameItem("Global Café", "Global Café serves Starbucks coffee and specializes in espresso drinks, but also GO meals, grilled sandwiches, and breakfast sandwiches."),
+        FameItem("Just Baked", "Just Baked kiosk is located in Center for Student Development offers 24hr convenient hot meal and snacks.")
+    )
+
+    val mealPlans = listOf(
+        FameItem("125 Block Plan", "Ideal plan for apartment dwellers who want to eat an average of 7-8 meals per week on campus and use 400 in Hawk Dollars throughout the semester; 3 Bonus Meals per semester to be used for yourself, another on-campus student, or commuter."),
+        FameItem("Block Meal Plans", "Block Meal Plans offer students the most flexibility as the amount of meals can be used throughout the semester in any manner. Students can use their block meals at our two all-you-care-to-eat dining halls.  All Block Meal Plans come with Bonus Meals, these meals can be used for guests not on a Roger Williams dining plan."),
+        FameItem("Commuter Plan", "This plan offers the best value for commuting students. You will receive 20 meals per semester that can be eaten at any meal period, as well as 300 Hawk Dollars."),
+        FameItem("Hawk Dollars", "Hawk Dollars are accepted like cash in all our dining locations.  Hawk Dollars are a “declining balance account” that works on the same principle as a debit card.  You can use your Hawk Dollars to purchase beverages, snacks, or even a full meal in all of the RWU retail and residential locations."),
+        FameItem("Points", "Much like Hawk Dollars, Points are accepted like cash in all our dining locations and are a “declining balance account” that works on the same principle as a debit card ")
+    )
+
+    var selectedItem by remember { mutableStateOf<FameItem?>(null) }
+
+    if (selectedItem != null) {
+        AlertDialog(
+            onDismissRequest = { selectedItem = null },
+            title = { Text(selectedItem!!.title, fontWeight = FontWeight.Bold) },
+            text = {
+                Text(
+                    text = selectedItem!!.detail,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = { selectedItem = null }) {
+                    Text("Close", color = MaterialTheme.colorScheme.secondary)
+                }
+            },
+            containerColor = Color.White,
+            textContentColor = MaterialTheme.colorScheme.secondary,
+            titleContentColor = MaterialTheme.colorScheme.secondary
+        )
+    }
+
+    Column(modifier = Modifier.fillMaxSize()) {
+        HeaderSection("Dining Halls & Meal Plans")
+
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            item { Spacer(modifier = Modifier.height(8.dp)) }
+
+            item { FameHeader("Dining Locations") }
+            items(diningHalls) { hall ->
+                FameCard(hall) { selectedItem = it }
+            }
+
+            item { FameHeader("Meal Plan Options") }
+            items(mealPlans) { plan ->
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF4E6)) // Light Orange
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(
+                            text = plan.title,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.tertiary,
+                            fontSize = 18.sp
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = plan.detail,
+                            color = MaterialTheme.colorScheme.secondary,
+                            fontSize = 14.sp
+                        )
+                    }
+                }
+            }
+        }
     }
 }
 
