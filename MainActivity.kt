@@ -187,23 +187,23 @@ fun FameScreen() {
                 Spacer(modifier = Modifier.height(8.dp))
             }
 
-            item { FameHeader("National Rankings") }
-            items(nationalRankings) { item -> FameCard(item) { selectedItem = it } }
+            item { BoxHeader("National Rankings") }
+            items(nationalRankings) { item -> BoxCard(item) { selectedItem = it } }
 
-            item { FameHeader("Athletic Achievements") }
-            items(athleticAchievements) { item -> FameCard(item) { selectedItem = it } }
+            item { BoxHeader("Athletic Achievements") }
+            items(athleticAchievements) { item -> BoxCard(item) { selectedItem = it } }
 
-            item { FameHeader("Notable Alumni & People") }
-            items(alumni) { item -> FameCard(item) { selectedItem = it } }
+            item { BoxHeader("Notable Alumni & People") }
+            items(alumni) { item -> BoxCard(item) { selectedItem = it } }
 
-            item { FameHeader("More Bragging Rights") }
-            items(braggingRights) { item -> FameCard(item) { selectedItem = it } }
+            item { BoxHeader("More Bragging Rights") }
+            items(braggingRights) { item -> BoxCard(item) { selectedItem = it } }
         }
     }
 }
 
 @Composable
-fun FameHeader(title: String) {
+fun BoxHeader(title: String) {
     Text(
         text = title,
         style = MaterialTheme.typography.headlineSmall,
@@ -214,7 +214,7 @@ fun FameHeader(title: String) {
 }
 
 @Composable
-fun FameCard(item: BoxItem, onClick: (BoxItem) -> Unit) {
+fun BoxCard(item: BoxItem, onClick: (BoxItem) -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -302,12 +302,12 @@ fun DiningScreen() {
         ) {
             item { Spacer(modifier = Modifier.height(8.dp)) }
 
-            item { FameHeader("Dining Locations") }
+            item { BoxHeader("Dining Locations") }
             items(diningHalls) { hall ->
-                FameCard(hall) { selectedItem = it }
+                BoxCard(hall) { selectedItem = it }
             }
 
-            item { FameHeader("Meal Plan Options") }
+            item { BoxHeader("Meal Plan Options") }
             items(mealPlans) { plan ->
                 Card(
                     modifier = Modifier.fillMaxWidth(),
