@@ -7,7 +7,7 @@ Roger Williams University Dining Services
 Main dining hall serving breakfast, lunch, and dinner. Choices seem endless at this all you care to eat café from made to order stir fry, fresh salads, comforting entrée’s, to tempting pizza, pasta, and grill favorites. The Upper Commons also has a dedicated made without gluten station and made without gluten options at all stations.
 
 <details>
-<summary>### Hours of operation</summary>
+<summary>Hours of operation</summary>
   
 #### Hours
 **Monday - Friday***  
@@ -31,7 +31,7 @@ Dinner: 5:00 p.m. - 7:30 p.m.
 Has everything from GO meals to sushi, pizza, grill, a salad bar, and made to order sandwiches – fire grilled or cold!
 
 <details>
-<summary>### Hours of operation</summary>
+<summary>Hours of operation</summary>
   
 #### Hours
 **Monday - Thursday**
@@ -52,7 +52,7 @@ Has everything from GO meals to sushi, pizza, grill, a salad bar, and made to or
 A taqueria-inspired café serving breakfast and lunch along with GO meals, soup, and sushi.
 
 <details>
-<summary>### Hours of operation</summary>
+<summary>Hours of operation</summary>
   
 #### Hours
   
@@ -71,7 +71,7 @@ Closed
 Serves coffee, fresh pastries, and bagels in addition to fruit smoothies and GO meals.
 
 <details>
-<summary>### Hours of operation</summary>
+<summary>Hours of operation</summary>
 
 #### Hours
   
@@ -83,7 +83,7 @@ Serves coffee, fresh pastries, and bagels in addition to fruit smoothies and GO 
 Serves Starbucks coffee and specializes in espresso drinks, but also GO meals, grilled sandwiches, and breakfast sandwiches.
 
 <details>
-<summary>### Hours of operation</summary>
+<summary>Hours of operation</summary>
 
 #### Hours
   
