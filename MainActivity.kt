@@ -73,7 +73,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TabScreen(viewModel: MainViewModel) {
     var tabIndex by remember { mutableIntStateOf(0) }
-    val tabs = listOf("Acad", "Trivial", "Fame")
+    val tabs = listOf("Acad", "Trivial", "Fame", "Dining")
 
     Column(modifier = Modifier.fillMaxSize()) {
 
@@ -82,6 +82,7 @@ fun TabScreen(viewModel: MainViewModel) {
                 0 -> ScreenSetup(viewModel)
                 1 -> TrivialScreen(viewModel)
                 2 -> FameScreen()
+                3 -> DiningScreen()
             }
         }
 
@@ -243,6 +244,14 @@ fun FameCard(item: FameItem, onClick: (FameItem) -> Unit) {
                 tint = MaterialTheme.colorScheme.tertiary
             )
         }
+    }
+}
+
+@Composable
+fun DiningScreen(){
+    Column(modifier = Modifier.fillMaxSize()) {
+        // Logo and Header
+        HeaderSection("Dining Halls & Meal Plans")
     }
 }
 
